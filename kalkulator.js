@@ -57,7 +57,35 @@ function mnozenie() {
 }
 function wynik() {
 	if (dzialanie.indexOf("+") !==-1){
-		console.log("ncoaivw")
-		
+		oblicz("+");
 	}
+	else if (dzialanie.indexOf("-") !==-1){
+		oblicz("-")
+	}
+	else if (dzialanie.indexOf("/") !==-1){
+		oblicz("/")
+	}
+	else if (dzialanie.indexOf("*") !==-1){
+		oblicz("*")
+	}
+	else{
+		dzialanie = "Błąd!"
+	}
+	document.getElementById("wynik").innerHTML = dzialanie;
+}
+
+function oblicz(znak) {
+	var fields = dzialanie.split(znak);
+	var x = fields[0];
+	var y = fields[1];
+	if(znak === "+") {
+		dzialanie = Number(x) + Number(y);
+	}
+	else if (znak === "-"){
+		dzialanie = Number(x) - Number(y);
+	}
+}
+function czyszczenie() {
+	dzialanie="";
+
 }

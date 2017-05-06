@@ -4,11 +4,12 @@
 	<meta charset="UTF-8">
 	<title>Kalkulator</title>
 	<script src="kalkulator.js"></script>
+	<link rel="Stylesheet" type="text/css" href="kalkulator.css" />
 </head>
 <body>
 <form action="">
-	<h1 id="tyt">Kalkulator</h1>
-	<h3 id="wynik">Wynik:</h3>
+	<h1 id="tyt"><span>Kalkulator</span></h1>
+	<table id="wynik">Wynik:</table>
 	<input id="9" type="button" value="9" onclick="dziewienc()">
 	<input id="8" type="button" value="8" onclick="osiem()">
 	<input id="7" type="button" value="7" onclick="siedem()">
@@ -24,7 +25,7 @@
 	<input id="dziel" type="button" value="/" onclick="dzielenie()">
 	<input id="mno" type="button" value="*" onclick="mnozenie()">
 	<input id="row" type="button" value="=" onclick="wynik()">
-	<input id="czy" type="button" value="C" onclick=""
+	<input id="czy" type="button" value="C" onclick="czyszczenie()">
 </form>
 </body>
 </html>

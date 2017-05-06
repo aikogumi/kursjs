@@ -1,8 +1,8 @@
-var dzialanie="";
+var dzialanie = "";
 function dziewienc() {
 	dzialanie = dzialanie + "9";
-		document.getElementById("wynik").innerHTML = dzialanie;
-	}
+	document.getElementById("wynik").innerHTML = dzialanie;
+}
 function osiem() {
 	dzialanie = dzialanie + "8";
 	document.getElementById("wynik").innerHTML = dzialanie;
@@ -16,11 +16,11 @@ function szesc() {
 	document.getElementById("wynik").innerHTML = dzialanie;
 }
 function pinc() {
-	dzialanie= dzialanie + "5";
+	dzialanie = dzialanie + "5";
 	document.getElementById("wynik").innerHTML = dzialanie;
 }
 function cztery() {
-	dzialanie= dzialanie + "4";
+	dzialanie = dzialanie + "4";
 	document.getElementById("wynik").innerHTML = dzialanie;
 }
 function trzy() {
@@ -56,20 +56,20 @@ function mnozenie() {
 	document.getElementById("wynik").innerHTML = dzialanie;
 }
 function wynik() {
-	if (dzialanie.indexOf("+") !==-1){
+	if (dzialanie.indexOf("+") !== -1) {
 		oblicz("+");
 	}
-	else if (dzialanie.indexOf("-") !==-1){
-		oblicz("-")
+	else if (dzialanie.indexOf("-") !== -1) {
+		oblicz("-");
 	}
-	else if (dzialanie.indexOf("/") !==-1){
-		oblicz("/")
+	else if (dzialanie.indexOf("/") !== -1) {
+		oblicz("/");
 	}
-	else if (dzialanie.indexOf("*") !==-1){
-		oblicz("*")
+	else if (dzialanie.indexOf("*") !== -1) {
+		oblicz("*");
 	}
-	else{
-		dzialanie = "Błąd!"
+	else {
+		dzialanie = "Błąd!";
 	}
 	document.getElementById("wynik").innerHTML = dzialanie;
 }
@@ -78,14 +78,20 @@ function oblicz(znak) {
 	var fields = dzialanie.split(znak);
 	var x = fields[0];
 	var y = fields[1];
-	if(znak === "+") {
+	if (znak === "+") {
 		dzialanie = Number(x) + Number(y);
 	}
-	else if (znak === "-"){
+	else if (znak === "-") {
 		dzialanie = Number(x) - Number(y);
+	}
+	else if (znak === "/") {
+		dzialanie = Number(x) / Number(y);
+	}
+	else if (znak === "*") {
+		dzialanie = Number(x) * Number(y);
 	}
 }
 function czyszczenie() {
-	dzialanie="";
-
+	dzialanie = "";
+	document.getElementById("wynik").innerHTML = dzialanie;
 }
